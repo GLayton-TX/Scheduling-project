@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #595e66; -fx-border-style: solid; -fx-border-width: 2; -fx-border-color: ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingProgram.View_Controller.LandingPage">
+   <children>
+      <TableView fx:id="appointmentTable" layoutX="16.0" layoutY="92.0" prefHeight="283.0" prefWidth="1170.0">
+        <columns>
+          <TableColumn fx:id="appointmentIdColumn" prefWidth="96.0" text="Appointment ID" />
+          <TableColumn fx:id="appointmentTitleColumn" prefWidth="99.0" text="Title" />
+            <TableColumn fx:id="appointmentDescriptionColumn" prefWidth="161.0" text="Appointment description" />
+            <TableColumn fx:id="appointmentLocationColumn" minWidth="0.0" prefWidth="131.0" text="Location" />
+            <TableColumn fx:id="appointmentContactColumn" prefWidth="117.0" text="Contact" />
+            <TableColumn fx:id="appointmentTypeColumn" prefWidth="154.0" text="Appointtment type" />
+            <TableColumn fx:id="startTimeColumn" prefWidth="165.0" text="Start Time" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="134.0" text="End Time" />
+            <TableColumn fx:id="appointmentCustomerIdColumn" prefWidth="112.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="allRadioButton" layoutX="33.0" layoutY="455.0" mnemonicParsing="false" onAction="#allRadioButtonSelected" text="All Appointments" textFill="WHITE" />
+      <RadioButton fx:id="weekRadioButton" layoutX="160.0" layoutY="455.0" mnemonicParsing="false" onAction="#weekRadioButtonSelected" text="Appointments by week" textFill="WHITE" />
+      <RadioButton fx:id="monthRadioButton" layoutX="324.0" layoutY="455.0" mnemonicParsing="false" onAction="#monthRadioButtonSelected" text="Appointments by month" textFill="WHITE" />
+      <Button fx:id="addAppointmentButton" layoutX="574.0" layoutY="451.0" mnemonicParsing="false" onAction="#addAppointmentButtonClicked" style="-fx-background-color: cccccc;" text="Add an Appointment" textFill="#1b6ea4" />
+      <Button fx:id="modifyAppointmentButton" layoutX="768.0" layoutY="451.0" mnemonicParsing="false" onAction="#modifyAppointmentButtonClicked" style="-fx-background-color: cccccc;" text="Modify an Appointment" textFill="#1b6ea4" />
+      <Button fx:id="deleteAppointmentButton" layoutX="966.0" layoutY="451.0" mnemonicParsing="false" onAction="#deleteAppointmentButtonClicked" style="-fx-background-color: cccccc;" text="Delete an Appointment" textFill="#1b6ea4" />
+      <Button fx:id="exitButton" layoutX="1112.0" layoutY="525.0" mnemonicParsing="false" onAction="#exitButtonClicked" style="-fx-background-color: #405bde#405bde;" text="Exit" textFill="#f2efef">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <ComboBox fx:id="monthComboBox" layoutX="228.0" layoutY="487.0" onAction="#monthSelected" prefWidth="150.0" style="-fx-background-color: cccccc;" />
+      <Separator layoutX="-4.0" layoutY="43.0" prefHeight="3.0" prefWidth="1200.0" />
+      <Hyperlink fx:id="customersLink" layoutX="33.0" layoutY="5.0" onAction="#customersLinkClicked" text="Customers">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="reportsButton" layoutX="612.0" layoutY="513.0" mnemonicParsing="false" onAction="#reportsButtonClicked" text="Reports" />
+   </children>
+</AnchorPane>

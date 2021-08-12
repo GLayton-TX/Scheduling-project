@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #595e66; -fx-border-style: solid; -fx-border-width: 2; -fx-border-color: ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingProgram.View_Controller.LogInScreen">
+   <children>
+       <TextField fx:id="userNameTextField" layoutX="250.0" layoutY="81.0" prefHeight="25.0" prefWidth="220.0" promptText="Username" />
+       <TextField fx:id="passwordTextField" layoutX="250.0" layoutY="159.0" prefHeight="25.0" prefWidth="220.0" promptText="Password" />
+      <Button fx:id="logInButton" layoutX="417.0" layoutY="227.0" mnemonicParsing="false" onAction="#logInButtonClicked" style="-fx-background-color: #405bde#405bde;" text="Log In" textFill="#f2efef" />
+      <Label fx:id="localRegionLabel" layoutX="124.0" layoutY="232.0" text="Local region " textFill="WHITE" />
+      <Label fx:id="userNameLabel" layoutX="125.0" layoutY="84.0" text="User Name" textFill="WHITE" />
+      <Label fx:id="passwordLabel" layoutX="125.0" layoutY="163.0" text="Password" textFill="WHITE" />
+      <Label fx:id="localRegion" layoutX="202.0" layoutY="232.0" text="current location" textFill="#30ff3b" />
+   </children>
+</AnchorPane>
